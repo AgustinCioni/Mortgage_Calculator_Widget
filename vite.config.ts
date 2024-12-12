@@ -4,22 +4,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    lib: {
-      entry: 'src/main.tsx',
-      name: 'MortgageCalculator',
-      formats: ['umd'],
-      fileName: () => 'index.js'
-    },
+    outDir: "dist", // Output directory for the build
     rollupOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM'
-        },
-        format: 'umd',
-        name: 'MortgageCalculator'
-      }
-    }
-  }
-})
+      input: "index.html", // Ensure this uses your app's main HTML file
+    },
+  },
+});

@@ -104,7 +104,8 @@ export default function MortgageForm({ onSubmit }: MortgageFormProps) {
         >
           <select
             {...register('loanTerm', { valueAsNumber: true })}
-            className="block w-full pl-10 pr-10 h-11 text-gray-900 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="block w-full pl-10 pr-12 h-11 text-gray-900 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
+            style={{ paddingLeft: '2.5rem' }}
           >
             <option value={30}>30-year fixed</option>
             <option value={15}>15-year fixed</option>

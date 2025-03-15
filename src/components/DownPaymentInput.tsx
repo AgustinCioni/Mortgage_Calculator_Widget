@@ -1,6 +1,6 @@
 import React from 'react';
 import { UseFormRegister, FieldErrors } from 'react-hook-form';
-import { DollarSign, Percent } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
 import { MortgageInput } from '../types/mortgage';
 import FormField from './FormField';
 
@@ -41,7 +41,6 @@ export default function DownPaymentInput({
       <FormField
         label="Down Payment %"
         error={errors.downPaymentPercentage}
-        icon={<Percent className="h-5 w-5 text-gray-400" />}
       >
         <input
           type="number"
@@ -53,7 +52,7 @@ export default function DownPaymentInput({
               Number(e.target.form?.homePrice.value) || 0
             )
           })}
-          className="block w-full pl-10 pr-12 h-11 text-gray-900 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="block w-full pl-3 pr-12 h-11 text-gray-900 border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           placeholder="20"
         />
       </FormField>

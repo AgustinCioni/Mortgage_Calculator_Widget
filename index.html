@@ -11,5 +11,12 @@
   <body>
     <div id="mortgage-calculator"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      window.addEventListener('load', function() {
+        if (window.initMortgageCalculator) {
+          window.initMortgageCalculator('mortgage-calculator');
+        }
+      });
+    </script>
   </body>
 </html>
